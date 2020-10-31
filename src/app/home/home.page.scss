@@ -1,0 +1,9 @@
+ion-grid {
+  ion-row:nth-child(1) {
+    text-transform: capitalize;
+    font-weight: bold;
+  }
+  ion-row:nth-child(odd) {
+    background: lightgrey;
+  }
+}
