@@ -46,7 +46,8 @@ export class HomePage {
         console.log(nearestStop, min);
         this.stop = nearestStop;
         this.distance = Math.round(min * 1000);
-        this.testApi(this.stop.stop_id);
+        // this.testApi(this.stop.stop_id);
+        this.testApi('U664Z1');
 
     }
 
@@ -57,9 +58,10 @@ export class HomePage {
                 'Content-Type': 'application/json',
             }
         };
-        const time = moment().valueOf();
+        const time: number = moment().valueOf();
+        console.log('time is ' + time);
         try {
-            this.http.get(API_URL + '/by-stop-id/' + stopId, httpOptions)
+            this.http.get(`${API_URL}/by-stop-id/${stopId}?t=${time}`, httpOptions)
                 .toPromise()
                 .then((data: any) => {
                     console.log(data);

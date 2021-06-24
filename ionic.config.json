@@ -1,0 +1,7 @@
+{
+  "name": "zastavky",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
