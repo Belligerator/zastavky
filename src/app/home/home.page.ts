@@ -58,10 +58,8 @@ export class HomePage {
                 'Content-Type': 'application/json',
             }
         };
-        const time: number = moment().valueOf();
-        console.log('time is ' + time);
         try {
-            this.http.get(`${API_URL}/by-stop-id/${stopId}?t=${time}`, httpOptions)
+            this.http.get(`${API_URL}/by-stop-id/${stopId}P?t=${moment().format('HH:mm')}&d=${moment().day()}`, httpOptions)
                 .toPromise()
                 .then((data: any) => {
                     console.log(data);
