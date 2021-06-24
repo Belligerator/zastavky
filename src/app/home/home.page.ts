@@ -46,8 +46,8 @@ export class HomePage {
         console.log(nearestStop, min);
         this.stop = nearestStop;
         this.distance = Math.round(min * 1000);
-        // this.testApi(this.stop.stop_id);
-        this.testApi('U664Z1');
+        this.testApi(this.stop.stop_id);
+        // this.testApi('U664Z1');
 
     }
 
