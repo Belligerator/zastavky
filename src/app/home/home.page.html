@@ -11,8 +11,9 @@
 
 <ion-content>
     <ion-button (click)="getCurrentPosition()">Kde jsem?</ion-button>
-    <div>{{stop?.stop_name}}</div><br>
-    <div *ngIf="distance">{{distance}} m</div>
+    <br>
+    <div *ngIf="distance">{{distance}} m od {{stop}}</div>
+    <br>
 
     <ion-grid *ngIf="resultList && resultList.length > 0">
         <ion-row>
